@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
                   type: TextInputType.emailAddress,
                   controller: correoController,
                   validator: (value) {
-                    if (value != 'ajaguilarp@unah.hn') {
+                    if (value != 'aa') {
                       //volver a cambiar a solo si esta vacio
                       return 'Ingrese un correo valido';
                     }
@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
                   mostrarBoton: true,
                   controller: contraseniaController,
                   validator: (value) {
-                    if (value != '20182031471') {
+                    if (value != '22') {
                       //volver a cambiar a un largo minimo
                       return 'Ingrese una contraseña valida';
                     }
@@ -77,22 +77,22 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 getInputValue();
                 if (a && b == true) {
-                  print('a casaaaaa');
+                  // print('a casaaaaa');
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Welcome(),
+                         builder: (context) => const Welcome(),
                       ));
                 } else {
-                  final snackBar = SnackBar(
-                    content: const Text('Datos Invalidos!'),
+                  const snackBar = SnackBar(
+                    content:  Text('Datos Invalidos!'),
                     
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
               },
-              icon: Icon(Icons.key),
-              label: Text('Iniciar sesion')),
+              icon: const Icon(Icons.key),
+              label: const Text('Iniciar sesion')),
         ],
       ),
     )));
